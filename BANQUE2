@@ -1,0 +1,25 @@
+public class Banque {
+    public static void main(String[] args) {
+        // Création des clients et de leurs comptes
+        Client client1 = new Client("Pedro", "Genève", new Compte(1000, 0.01), new Compte(2000, 0.02));
+        Client client2 = new Client("Alexandra", "Lausanne", new Compte(3000, 0.01), new Compte(4000, 0.02));
+
+        // Affichage des clients avant le calcul des intérêts
+        System.out.println("Avant le calcul des intérêts:");
+        afficherClient(client1);
+        afficherClient(client2);
+
+        // Calcul des intérêts pour tous les comptes
+        client1.getComptePrive().calculerInterets();
+        // ... et ainsi de suite pour les autres comptes
+
+        // Affichage des clients après le calcul des intérêts
+        System.out.println("\nAprès le calcul des intérêts:");
+        afficherClient(client1);
+        afficherClient(client2);
+    }
+
+    public static void afficherClient(Client client) {
+        // ...
+    }
+}
